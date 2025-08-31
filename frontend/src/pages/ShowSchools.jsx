@@ -6,7 +6,7 @@ export default function ShowSchools() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/schools")
+      .get("https://school-ndig.onrender.com/schools")
       .then((res) => setSchools(res.data));
   }, []);
 
@@ -15,7 +15,7 @@ export default function ShowSchools() {
       {schools.map((s) => (
         <div key={s.id} className="border rounded-lg p-4 shadow">
           <img
-            src={`http://localhost:5000/uploads/${s.image}`}
+            src={`https://school-ndig.onrender.com/uploads/${s.image}`}
             alt={s.name}
             className="h-40 w-full object-cover rounded"
           />
