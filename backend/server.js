@@ -1,7 +1,10 @@
 import express from "express";
 import cors from "cors";
 import schoolsRoutes from "./routes/schools.js";
+import dotenv from "dotenv";
+import db from "./db.js";
 
+dotenv.config();
 const app = express();
 
 app.use(cors());
